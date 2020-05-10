@@ -21,6 +21,7 @@ body > header {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     padding: 0 10px;
@@ -53,6 +54,8 @@ aside {
 main > section {
     display: flex;
     flex-wrap: wrap;
+    justify-content:flex-start;
+    align-items: flex-start;
     width: 100%;
 }
 
@@ -60,6 +63,11 @@ h2 {
     flex-basis: 100%;
     margin: 10px 0;
 }
+
+/*main > section:first-child {
+    height: 600px;
+}*/
+
 
 main > section:first-child > h2 {
     padding-bottom: 2em;
@@ -86,8 +94,7 @@ section:first-child > article:last-child {
 }
 
 section:first-child > article > hgroup {
-    margin: 40% auto 40px;
-    width: 50%;
+    margin: 45% auto 5%;
     color: white;
 }
 
@@ -101,7 +108,9 @@ section:first-child > article:last-child > a {
     text-decoration: none;
     background: white;
     color: gray;
-    margin: auto;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 2% auto;
     transition: .5s
 }
 
@@ -112,10 +121,10 @@ section:first-child > article:last-child > a:hover {
     border: 1px solid white;
 }
 
-/*section:first-child,
+section:first-child,
 section:nth-child(2) {
     min-height: 100vh
-}*/
+}
 
 h2,
 h3,
@@ -128,7 +137,7 @@ section > article > header {
     top: -50px;
     left: 25%;
     width: 50%;
-    /*margin: 0 auto 20vh;*/
+    margin: 0 auto;
     background: black;
     color: white;
     text-align: center;
@@ -142,15 +151,20 @@ section > article > header {
 
 section > article > p {
     width: 90%;
-    margin: 10px auto;
+    margin: 70% auto 0;
     word-spacing: 5px;
+    /*position: absolute;
+    bottom: 0%;
+    left: 0;*/
 }
 
 section > article > footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    /*position: absolute;
+    bottom: 0%;
+    left: 0;*/
+    /*width: 100%;*/
+    margin: auto 0;
+    text-align: center;
     background: black;
     color: white;
     height: 50px;
@@ -187,6 +201,7 @@ main > section:nth-of-type(2) > figure {
         position: fixed;
         top: 0;
         right: 0;
+        z-index: 1;
     }
 
     nav > ul {
@@ -294,5 +309,5 @@ main > section:nth-of-type(2) > figure {
     a[title="comment"] {
         display: none
     }
-
+    
 }

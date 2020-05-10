@@ -1,0 +1,94 @@
+/** {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}*/
+
+figure {
+    cursor: pointer;
+    width: 24%;
+    height: 200px;
+    display: inline-block;
+    overflow: hidden;
+    /* masque d'écrétage */
+    border-radius: 10px;
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+figcaption {
+    display: block;
+    color: white;
+    background: rgba(0, 0, 0, .5);
+    position: absolute;
+    transition-property: all;
+    transition-duration: 1s;
+    text-align: center;
+    font-size: 20px;
+}
+
+/*
+figure:hover figcaption {
+    top: 82px;
+}
+*/
+
+figure:nth-of-type(1) > figcaption {
+    height: 50px;
+    width: 100%;
+    bottom: -50px;
+    left: 0;
+    padding-top: 10px;
+}
+
+figure:nth-of-type(1):hover > figcaption {
+    bottom: 0px;
+}
+
+figure:nth-of-type(2) > figcaption {
+    height: 50px;
+    width: 100%;
+    top: -50px;
+    left: 0;
+    padding-top: 10px;
+}
+
+figure:nth-of-type(2):hover > figcaption {
+    top: 0px;
+}
+
+figure:nth-of-type(3) > figcaption {
+    /*writing-mode: sideways-lr;*/
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: -6px;
+    height: 100%;
+    width: 50px;
+    top: 0px;
+    left: -50px;
+    padding-right: 10px;
+}
+
+figure:nth-of-type(3):hover > figcaption {
+    left: 0px;
+}
+
+figure:nth-of-type(4) > figcaption {
+    /*writing-mode: sideways-rl;*/
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: -6px;
+    height: 100%;
+    width: 50px;
+    top: 0px;
+    right: -50px;
+    padding-right: 10px;
+}
+
+figure:nth-of-type(4):hover > figcaption {
+    right: 0;
+}
